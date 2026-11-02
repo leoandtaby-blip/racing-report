@@ -63,6 +63,26 @@ Heavy             1     1   100%      1.0    0
 
 Iron Duke has no wins from six runs on fast ground, but three from six on Soft and Heavy. If a horse like this runs on ground it likes, that's useful for a trader. Small samples need care, though: one run on Heavy proves very little.
 
+## Hedging calculator
+
+`hedge_calculator.py` is for a bookmaker who has laid a bet. You enter the punter's stake, the price they got, the exchange back price and the exchange commission. It works out how much to back on the exchange so the result is the same whether the horse wins or loses.
+
+```
+python hedge_calculator.py
+```
+
+Example: a punter has £100 at 3.0, and the horse is 5.0 on the exchange (5% commission).
+
+```
+Back £62.50 on the exchange at 5.0
+  If the horse wins:  £+37.50
+  If the horse loses: £+37.50
+
+Profit locked in, whatever happens.
+```
+
+If the exchange price has shortened below the punter's price (say to 2.5), it warns that hedging can only limit the loss. It also keeps asking until a valid number is typed.
+
 ## The data
 
 `racing.db` is a made-up practice database of 80 races and 708 runners, built for learning SQL. It is not real racing data.

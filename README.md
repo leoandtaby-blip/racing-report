@@ -42,6 +42,27 @@ Big-priced winners (10.0 or bigger):
   Iron Duke at 10.8 (Newmarket, 2026-01-21)
 ```
 
+## Going report
+
+`going_report.py` shows how one horse runs on each type of going, from Firm to Heavy: runs, wins, win %, average finishing position and races it didn't finish.
+
+```
+python going_report.py
+```
+
+```
+Iron Duke: record by going
+Going          Runs  Wins  Win %  Avg pos  DNF
+Firm              1     0     0%      9.0    0
+Good to Firm      5     0     0%      5.0    0
+Good              6     1    17%      3.0    0
+Good to Soft      3     0     0%      5.7    0
+Soft              5     2    40%      4.2    0
+Heavy             1     1   100%      1.0    0
+```
+
+Iron Duke has no wins from six runs on fast ground, but three from six on Soft and Heavy. If a horse like this runs on ground it likes, that's useful for a trader. Small samples need care, though: one run on Heavy proves very little.
+
 ## The data
 
 `racing.db` is a made-up practice database of 80 races and 708 runners, built for learning SQL. It is not real racing data.
